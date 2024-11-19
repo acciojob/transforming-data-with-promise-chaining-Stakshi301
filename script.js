@@ -15,25 +15,25 @@ document.getElementById("btn").addEventListener("click", () => {
   // Start of promise chain
   delayOperation(Number(input), 2)
     .then((result) => {
-      outputDiv.innerHTML = Result: ${result};
+      outputDiv.innerHTML = `Result: ${result}`;
       return delayOperation(result * 2, 1); // Multiply by 2
     })
     .then((result) => {
-      outputDiv.innerHTML = Result: ${result};
+      outputDiv.innerHTML = `Result: ${result}`;
       return delayOperation(result - 3, 1); // Subtract 3
     })
     .then((result) => {
-      outputDiv.innerHTML = Result: ${result};
+      outputDiv.innerHTML = `Result: ${result}`;
       return delayOperation(result / 2, 1); // Divide by 2
     })
     .then((result) => {
-      outputDiv.innerHTML = Result: ${result};
+      outputDiv.innerHTML = `Result: ${result}`;
       return delayOperation(result + 10, 1); // Add 10
     })
     .then((finalResult) => {
-      outputDiv.innerHTML = Final Result: ${finalResult}; // Final result
+      outputDiv.innerHTML = `Final Result: ${finalResult}`; // Final result
     })
     .catch((error) => {
-      outputDiv.innerHTML = Error: ${error};
-    });
+      outputDiv.innerHTML = `Error: ${error}`;
+    });
 });
